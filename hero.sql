@@ -183,3 +183,9 @@ SELECT player_name, hero_name, is_active
 FROM player INNER JOIN hero
 ON player.hero_id = hero.hero_id
 WHERE is_active = 'true'
+
+--6. Create new branch named "feat/select-heroes-archers"
+SELECT hero_name, class_name
+FROM hero INNER JOIN class
+ON hero.class_id = class.class_id
+WHERE hero_name = 'Range Archers'
