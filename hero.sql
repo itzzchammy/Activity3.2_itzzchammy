@@ -163,3 +163,17 @@ SET item_price = 1000.00
 WHERE item_id = 101
 -- Select the information of item_id 101 with item price.
 SELECT * FROM item WHERE item_id = 101
+
+--4.
+-- Update the hero 1 to inactive
+UPDATE hero
+SET is_active = 'false'
+WHERE hero_id = 1
+
+SELECT * FROM hero WHERE hero_id = 1
+
+-- Delete the item associated with hero 1
+DELETE FROM heroitem
+WHERE hero_id = 1
+
+SELECT * FROM heroitem
