@@ -152,3 +152,14 @@ VALUES
     (8, 8, 108),  -- Fanny has Thunder Belt
     (9, 9, 109),  -- Leomord has Blade Armor
     (10, 10, 110);  -- Chou has Feather of Heaven
+
+--3. Create new branch named "feat/add-column-price"
+-- Adding the column
+ALTER TABLE item
+ADD COLUMN item_price DECIMAL (7,2)
+-- Adding a value for item price in item_id = 101
+UPDATE item
+SET item_price = 1000.00
+WHERE item_id = 101
+-- Select the information of item_id 101 with item price.
+SELECT * FROM item WHERE item_id = 101
